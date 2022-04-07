@@ -1,0 +1,9 @@
+<nav class="nav">
+    {% if not app.user %}
+        <a class="nav_item" href="{{ path('app_login') }}">Connection</a>
+        <a class="nav_item" href="{{ path('app_register') }}">Register</a>
+    {% endif %}
+    {% if app.user %}
+        <a class="nav_item" href="{{ path('app_logout') }}">Disconnect</a>
+    {% endif %}
+</nav>
